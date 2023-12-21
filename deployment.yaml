@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myapp1
+  name: myapp1
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: myapp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myapp1
+    spec:
+      containers:
+      - image: us-west1-docker.pkg.dev/dnblab1/garlabrepo1/jenapp1:mynginx
+        name: jenapp1
+        resources: {}
+status: {}
